@@ -1,0 +1,1 @@
+- Primera prueba del KnockBack: Se ha añadido un cubo y una plataforma. El cubo recibe un impulso mediante un script.
