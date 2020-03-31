@@ -16,23 +16,23 @@ public class Knocback : MonoBehaviour {
 
     void Update()
     {
-		if (knockBack)
-		{
-			knockBack = !knockBack;
-			rb.AddForce(transform.right * thrust, ForceMode2D.Force);
-		}
-
 		//if (knockBack)
 		//{
 		//	knockBack = !knockBack;
-		//	//if intfont of player make - thrust if behind player make thrust
-		//	rb.AddForce(transform.right * -thrust);
-		//	rb.AddForce(transform.up * thrust);
+		//	rb.AddForce(transform.right * thrust, ForceMode2D.Force);
 		//}
+
+		if (knockBack)
+		{
+			knockBack = !knockBack;
+			//Ahora habria que poner segun el punto de contacto, hacia donde empujar.
+			rb.AddForce(transform.right * -thrust);
+			rb.AddForce(transform.up * thrust);
+		}
 	}
 	#endregion
 
 	#region Personal Methods
 	#endregion
-	
+
 }
